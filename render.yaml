@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sketchclub
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
